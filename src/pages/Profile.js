@@ -37,16 +37,47 @@ const Profile = () => {
   const offerBooksForExchange = JSON.parse(
     localStorage.getItem("booksForExchange")
   );
-  const [myBook, setMyBook] = useState({
-    bookIHaveTitle : offerBooksForExchange[selectedMyBook].title,
-    bookIHaveOlid : offerBooksForExchange[selectedMyBook].olid,
-    bookIHaveUrlToImage : offerBooksForExchange[selectedMyBook].urlToImage
-  });
-  const [requiredBook, setRequiredBook] = useState({
-    bookIWantTitle : offerBooksRequired[selectedRequiredBook].title,
-    bookIWantOlid : offerBooksRequired[selectedRequiredBook].olid,
-    bookIWantUrlToImage : offerBooksRequired[selectedRequiredBook].urlToImage
-  });
+  // const [myBook, setMyBook] = useState({
+  //   bookIHaveTitle : offerBooksForExchange[selectedMyBook].title,
+  //   bookIHaveOlid : offerBooksForExchange[selectedMyBook].olid,
+  //   bookIHaveUrlToImage : offerBooksForExchange[selectedMyBook].urlToImage
+  // });
+  // const [requiredBook, setRequiredBook] = useState({
+  //   bookIWantTitle : offerBooksRequired[selectedRequiredBook].title,
+  //   bookIWantOlid : offerBooksRequired[selectedRequiredBook].olid,
+  //   bookIWantUrlToImage : offerBooksRequired[selectedRequiredBook].urlToImage
+  // });
+  const [myBook, setMyBook] = useState();
+  const [requiredBook, setRequiredBook] = useState()
+  useEffect(() => {
+    // Conditionally initialize myBook and requiredBook
+    if (offerBooksForExchange.length > 0 && offerBooksRequired.length > 0) {
+      setMyBook({
+        bookIHaveTitle: offerBooksForExchange[selectedMyBook].title,
+        bookIHaveOlid: offerBooksForExchange[selectedMyBook].olid,
+        bookIHaveUrlToImage: offerBooksForExchange[selectedMyBook].urlToImage,
+      });
+      setRequiredBook({
+        bookIWantTitle: offerBooksRequired[selectedRequiredBook].title,
+        bookIWantOlid: offerBooksRequired[selectedRequiredBook].olid,
+        bookIWantUrlToImage: offerBooksRequired[selectedRequiredBook].urlToImage,
+      });
+    } else {
+      // Default values when the arrays are empty
+      setMyBook({
+        bookIHaveTitle: "",
+        bookIHaveOlid: "",
+        bookIHaveUrlToImage: "",
+      });
+      setRequiredBook({
+        bookIWantTitle: "",
+        bookIWantOlid: "",
+        bookIWantUrlToImage: "",
+      });
+    }
+  
+    getData();
+  }, [selectedMyBook, selectedRequiredBook]);
   const [description, setDescription] = useState("");
 
   const token = localStorage.getItem("token");
@@ -128,9 +159,12 @@ const Profile = () => {
         <PiChatsCircleBold size={30} className='deals-icon' onClick={()=>setSidebarOpen((prev)=>!prev)}/>
         <div className={`backdrop ${openPlaceOffer ? "translate-back" : ""}`} onClick={()=>setOpenPlaceOffer(false)}></div>
           <div className={`offers-container ${openPlaceOffer ? "translate-back" : ""}`}>
-           <button className="place-offer" onClick={placeOffer}>Place Offer</button>
+            {
+              offerBooksForExchange.length > 0 && offerBooksRequired.length > 0 && 
+              <button className="place-offer" onClick={placeOffer}>Place Offer</button>
+            }
             <div className="books-display">
-              {offerBooksRequired.map((book, index) => {
+              {offerBooksRequired?.map((book, index) => {
                 return (
                   <div
                   key={index}
@@ -152,7 +186,7 @@ const Profile = () => {
             </div>
             <h1>For</h1>
             <div className="books-display">
-              {offerBooksForExchange.map((book, index) => {
+              {offerBooksForExchange?.map((book, index) => {
                 return (
                   <div
                     key={index}
@@ -227,7 +261,7 @@ const Profile = () => {
           </div>
           <div className="user-books-list">
             {showMyBooks
-              ? booksForExchange.map((book, index) => {
+              ? booksForExchange.length > 0 ? booksForExchange.map((book, index) => {
                   return (
                     <Book
                       key={index}
@@ -236,8 +270,8 @@ const Profile = () => {
                       title={book.title}
                     />
                   );
-                })
-              : booksRequired.map((book, index) => {
+                }) : <h3>No books selected.</h3>
+              : booksRequired.length > 0 ? booksRequired.map((book, index) => {
                   return (
                     <Book
                       key={index}
@@ -246,7 +280,8 @@ const Profile = () => {
                       title={book.title}
                     />
                   );
-                })}
+                }) : <h3>No books selected.</h3>
+              }
           </div>
         </div>
       </Sidebar>
