@@ -1,0 +1,146 @@
+.page-padding {
+    padding: 1rem;
+}
+
+.book-and-owners {
+    display: flex;
+    height: 50vh;
+}
+
+
+
+.book-info-container{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+
+}
+
+.book-photo {
+    max-height: 35vh;
+}
+
+.add-book-btn {
+    border: 0px;
+    padding: 0.4rem;
+    border-radius: 5px;
+    background-color: #2E2E2E;
+    color: rgba(255, 255, 255, 0.6);
+    transition: 0.4s ease-in-out;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.add-book-btn:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #2E2E2E;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+}
+
+.owners {
+    width: 70%;
+    padding: .5rem;
+    background-color: #222222;
+    border-radius: 1.5rem;
+}
+
+.owner-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    max-height: 94%;
+
+}
+
+.owner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 15vw;
+    max-width: 143px;
+    padding: .5rem;
+    border-radius: 1rem;
+    margin-top: 8px;
+    margin-left: 4px;
+    transition: .4s ease-in-out;
+}
+
+.owner:hover {
+    cursor: pointer;
+    width: 17vw;
+    background-color: #222222;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.user-img-container {
+    background-color: #fff;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 2vh;
+    overflow: hidden;
+}
+
+.user-img {
+    max-height: 5vh;
+    /* position: relative;
+    left: 5%;
+    right: 25%; */
+}
+
+.owners > h3 ,
+.book-info-container > p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width : 47rem) {
+    .book-and-owners {
+        height: fit-content;
+        max-height: 100vh;
+        flex-direction: column;
+    }
+
+    .book-info-container {
+        width: 90vw;
+        height: 50%;
+    }
+
+    .owners { 
+    margin-top: 3rem;
+    width: 70vw;
+    }
+
+    .owner-list {
+        height: 100%;
+        max-height: 40vh;
+        align-items: center;
+    }
+
+    .owner {
+        width: 63vw;
+    }
+
+    .buttons {
+        margin-top: 2rem;
+    }
+
+    .add-book-btn {
+        padding: 1rem;
+    }
+
+}

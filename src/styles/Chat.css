@@ -1,0 +1,208 @@
+.chat-page-container {
+    margin-top: 10vh;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts-and-chat-container {
+    height: 80%;
+    width: 70%;
+    min-width: 548px;
+    display: flex;
+}
+
+.contacts {
+    background-color: #2E2E2E;
+    width: 30%;
+    height: 100%;
+    padding: 8px 16px;
+    max-width: 205px;
+}
+
+.contacts > h4 {
+    text-align: center;
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    padding: 8px 4px;
+}
+
+.contact-list {
+    max-height: calc(100% - 36px - 16px);
+    overflow: auto;
+}
+
+.contact {
+    height: 8vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.contact:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-img-container {
+    height: 6vh;
+    width: 6vh;
+    border-radius: 3vh;
+    overflow: hidden;
+}
+
+.contact-img {
+    max-height: 6vh;
+}
+
+.chat-container {
+    background-color: #353839;
+    border: 1px solid #2E2E2E;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-bar {
+    background-color: #2E2E2E;
+    border-left: 1px solid #222222;
+    height: 8vh;
+    padding-top: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-bar-contact {
+    width: 21%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.info-bar-contact p {
+    margin-left: 4px;
+    color: rgb(255, 255, 255, 0.8);
+}
+
+.description-info {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.deal-done {
+    color: rgb(255, 255, 255, 0.8);
+    transition: color 0.3s ease-in-out;
+    width: 16%;
+}
+
+.deal-done:hover {
+    cursor: pointer;
+    color: rgb(53, 148, 53);
+}
+
+.chat {
+    height: calc(100% - 8vh - 8vh);
+    width: 100%;
+    padding: 0 .4rem;
+    overflow: auto;
+}
+
+.message-container {
+    margin-top: 4px;
+}
+
+.message {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: fit-content;
+    max-width: 50%;
+    height: fit-content;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.message-sent {
+    margin-left: 0px;
+}
+
+.message-received {
+    margin-left: auto;
+}
+
+.search-bar {
+    background-color: #2E2E2E;
+    border-left: 1px solid #222222;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar form {
+    position: relative;
+    width: 70%;
+}
+
+.search-bar input {
+    height: 7vh;
+    width: 100%;
+    border: 1px solid #222222;
+    background-color: transparent;
+    border-radius: 64px;
+    padding: 1rem;
+    padding-right: 62px;
+    color: rgb(255, 255, 255, 0.8);
+}
+
+.search-bar input:focus {
+    background-color: #222222;
+    /* border: 0px; */
+    outline: 0px;
+}
+
+.search-bar form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 0.5rem;
+    border: 0px;
+    border-radius: 60px;
+    width: 18%;
+    background-color: #222222;
+    color: rgb(255, 255, 255, 0.8);
+    transition: .4s ease-in-out;
+}
+
+.search-bar form button:hover {
+    cursor: pointer;
+    background-color: grey;
+    color: #222222;
+
+}
+
+
+@media (max-width : 30rem) {
+    .chat-page-container {
+        height: 76vh;
+    }
+
+    .contacts-and-chat-container {
+        padding: 3rem;
+    }
+    
+    .contacts {
+        display: none;
+    }
+
+    .chat-container {
+        width: 100vw;
+    }
+}

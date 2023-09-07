@@ -1,0 +1,101 @@
+.edit-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+    width: 100%;
+}
+
+.edit-info-container {
+    background-color: #2E2E2E;
+    height: 50%;
+    width: 50%;
+    border-radius: 1rem;
+}
+
+.edit-info-container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.edit-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.edit-image-container input {
+    margin-top: 8px;
+}
+
+.edit-image {
+    height: 16vh;
+    width: 17vw;
+    overflow: hidden;
+}
+
+.edit-image img {
+    max-height: 18vh;
+}
+
+@media (max-width : 30rem) {
+    .edit-image-container {
+        align-items: flex-start;
+    }
+
+    .edit-info-container {
+        width: 75vw;
+    }
+
+    .edit-image {
+        overflow: visible;
+    }
+
+    .edit-image img {
+        max-width: 48vw;
+    }
+
+}
+
+.username {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: .5vw;
+}
+
+.username label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.username input {
+    width: 96%;
+    padding: 4px;
+    border-radius: 11px;
+    border: 0px;
+    margin-top: 11px;
+}
+
+.btn-edit {
+    bottom: 7%;
+    position: absolute;
+    right: 39%;
+    padding: 0.5rem;
+    border-radius: 26px;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #2E2E2E;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-edit:hover {
+    background-color: #2E2E2E;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}

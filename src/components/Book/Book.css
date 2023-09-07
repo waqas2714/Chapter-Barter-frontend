@@ -1,0 +1,20 @@
+.book-custom {
+    width: 32vh;
+    margin-top: 2vh;
+    margin-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.1rem 0.2rem;
+    border-radius: 1rem;
+    transition: background-color 0.4s ease-in-out;
+    max-height: 273px;
+    overflow: hidden;
+}
+
+.book-custom:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.book-custom p {
+    margin-top: 16px;
+}

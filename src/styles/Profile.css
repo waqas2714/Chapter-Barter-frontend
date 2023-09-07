@@ -1,0 +1,205 @@
+.backdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transform: translateY(-100vh);
+    transition: 0.4s ease-in-out;
+}
+
+.offers-container {
+    width: 85vw;
+    height: 75vh;
+    background-color: #2E2E2E;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 15vh;
+    left: 7vw;
+    z-index: 30;
+    transform: translateY(-100vh);
+    transition: 0.6s ease-in-out;
+}
+
+
+.place-offer {
+    position: absolute;
+    top: 3%;
+    right: 50;
+    border: 0px;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: #2E2E2E;
+    background-color: rgb(255, 255, 255, 0.8);
+    transition: 0.4s ease-in-out;
+}
+
+.place-offer:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #222222;
+}
+
+.books-display {
+    height: 60%;
+    width: 30%;
+    border-radius: 10px ;
+    background-color: #353839;
+    overflow: auto;
+}
+
+@media (max-width: 30rem) {
+    .books-display {
+        width: 44%;
+    }
+}
+
+.offer-book {
+    width: 85%;
+    margin: 2vh auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.1rem 0.2rem;
+    border-radius: 1rem;
+    transition: background-color 0.4s ease-in-out;
+    max-height: 273px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 234px;
+}
+
+.selected {
+    background-color: #2E2E2E;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.offer-book:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.offer-book p {
+    margin-top: 16px;
+}
+
+.user-information {
+    height: 35vh;
+    display: flex;
+}
+
+@media (max-width:30rem) {
+    .user-information {
+        height: 24vh;
+    }
+}
+
+.profile-picture {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture img{
+    /* background: url('../assets/testImagePerson.jpg') center/cover no-repeat border-box; */
+    max-height: 20vw;
+    max-width: 180px;
+    border-radius: 10vw;
+    border: 0px;
+}
+
+.user-credentials {
+    width: 70%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.user-credentials h3{
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255, 0.8);
+}
+
+.headings {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.headings h4 {
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+}
+
+.headings h4:hover {
+    color: rgb(255, 255, 255, 0.7);
+}
+
+.active {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid #353839;
+    padding: .3rem;
+    position: relative;
+    top: 1px;
+    z-index: -10;
+}
+
+.user-books-list {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.offer-button {
+    padding: 0.7rem;
+    background-color: #2E2E2E;
+    color: rgb(255, 255, 255, 0.8);
+    border: 0px;
+    border-radius: 8px;
+    transition: 0.5s ease-in-out;
+    margin-left: 1vh;
+}
+
+.offer-button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255, 0.8);
+    color: #2E2E2E;
+}
+
+.offers-container input {
+    position: absolute;
+    bottom: 6%;
+    padding: 0.8rem;
+    width: 80%;
+    border-radius: 23px;
+    border: 0px;
+    background-color: rgba(0,0,0,0.2);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.offers-container input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    outline: 0px;
+} 
+
+
+
+.translate-back {
+    transform: translateY(0vh);
+}

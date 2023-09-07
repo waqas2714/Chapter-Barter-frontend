@@ -1,0 +1,123 @@
+.home {
+    padding: 1rem;
+}
+
+.home > h3 {
+    text-align: center;
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 2rem;
+}
+
+.all-offers {
+    color: #2E2E2E;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 0px;
+    display: none;
+    position: fixed;
+    right: 4vw;
+    top: 14vh;
+    transition: .4s ease-in-out;
+}
+
+.all-offers:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #2E2E2E;
+}
+
+.block {
+    display: block;
+}
+
+.offer{
+    background-color: rgba(255, 255, 255, 0.1);
+    min-width: 325px;
+    max-width: 95%;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.offer:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.user-info-and-chat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.user-info:hover{
+    cursor: pointer;
+}
+
+.user-info h4 {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.user-image {
+    max-width: 50px ;
+    border-radius: 20px;
+}
+
+.chat-btn {
+    margin-right: 1rem;
+}
+
+.chat-icon {
+    color: white;
+}
+
+.chat-icon:hover{
+    cursor: pointer;
+}
+
+.delete-icon {
+    color: #2E2E2E;
+    margin-left: 1vw;
+    transition: .3s ease-in-out;
+}
+
+.delete-icon:hover {
+    cursor: pointer;
+    color: rgb(189, 45, 45);
+}
+
+.books {
+    padding : 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.book > p {
+    margin-top: .5rem;
+}
+
+.book-image {
+    max-height: 20vh;
+}
+
+@media (max-width: 30rem) {
+    .book-image {
+        max-width: 30vw;
+    }
+}

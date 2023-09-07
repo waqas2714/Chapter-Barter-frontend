@@ -1,0 +1,66 @@
+.container {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0.3) 100%) ,url('../assets/coverHorizontal.png') center/cover no-repeat border-box, black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background-color: rgba(255,255,255,0.8);
+    height: fit-content;
+    width: fit-content;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.input-container {
+    height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.input-label {
+    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.input {
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 0px;
+    margin-top: 0.3rem;
+    background-color: rgba(255,255,255, .6);
+}
+
+.input:focus {
+    background-color: white;
+}
+
+.btn {
+    border-radius: 2rem;
+    padding: 0.5rem;
+    border: 0px;
+    height: 2rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    margin-top: 1rem;
+}

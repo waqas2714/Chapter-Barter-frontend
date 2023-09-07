@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #353839;
+  overflow-x: clip;
+}
+
+.deals-icon {
+  color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 19vh;
+    right: 11vw;
+    display: none;
+}
+
+@media (max-width : 30rem) {
+  .deals-icon {
+    display: block;
+  }
+}
+
+.translate-back {
+  transform: translateY(0vh);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2E2E2E;
+  border: 1px solid #181818;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color:  #424242;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

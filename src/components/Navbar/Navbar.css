@@ -1,0 +1,132 @@
+.header {
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+}
+
+/* @media (max-width : 47rem) {
+    .header {
+       width: 100vw;
+    }
+} */
+
+.nav {
+    background-color: #2E2E2E;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    border-bottom: 1px solid black;
+}
+
+.logo-container {
+    height: fit-content;
+    width: fit-content;
+}
+
+.nav-logo {
+    max-height: 16vh;
+    position: absolute;
+    bottom: -28%;
+    left: 0%;
+    cursor: pointer;
+}
+
+@media (max-width : 30rem) {
+    .nav-logo {
+        max-height: 8vh;
+        position: absolute;
+        bottom: 8%;
+        left: -4%;
+        cursor: pointer;
+    }
+}
+
+.icons-and-links {
+    width: 42%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+@media (max-width : 30rem) {
+    .icons-and-links {
+        width: 60%;
+    }
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.search-input {
+    border: 0px;
+    padding: 6px;
+    border-radius: 1rem;
+    width: 0%;
+    padding-right: 28px;
+    padding-left: 8px;
+    position: relative;
+    z-index: -1;
+    transition: width .5s ease-in-out;
+}
+
+
+.search-icon {
+    position: absolute;
+    right: 10%;
+    top: 11%;
+    cursor: pointer;
+}
+
+
+.z-above {
+    z-index: 0;
+    width: 86%; 
+}
+
+@media (max-width: 30rem) {
+    .z-above {
+        width: 90px;
+    }
+}
+
+.genres-icon {
+    color: white;
+    transition:  .5s ease-in-out;
+}
+
+.genres-icon:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.profile-icon {
+    color: white;
+    transition:  .5s ease-in-out;
+}
+
+.profile-icon:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.logout-icon {
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.logout-icon:hover {
+    color: rgb(255, 42, 42);
+}
+
+.translate-back {
+    transform: translateY(0vh);
+}
