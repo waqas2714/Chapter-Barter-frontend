@@ -191,11 +191,13 @@
 
 @media (max-width : 30rem) {
     .chat-page-container {
-        height: 76vh;
+        height: 89vh;
     }
 
     .contacts-and-chat-container {
-        padding: 3rem;
+        height: 100%;
+        width: 100%;
+        min-width: initial;
     }
     
     .contacts {
