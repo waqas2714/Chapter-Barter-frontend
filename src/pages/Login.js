@@ -62,6 +62,10 @@ const Login = () => {
         verifyToken();
     },[])
 
+    useEffect(()=>{
+        toast.info("Due to the free version of render, the backend takes time in loading, if it doesn't login at first, you might need to refresh the page.", toastOptions)
+    },[])
+    
   return (
     <>
         <div className='container'>
